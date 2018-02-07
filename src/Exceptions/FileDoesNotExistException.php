@@ -2,6 +2,4 @@
 
 namespace Mentalist\Logme\Exceptions;
 
-class FileDoesNotExistException extends \Exception {
-
-}
+class FileDoesNotExistException extends \Exception {}
