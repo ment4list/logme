@@ -2,6 +2,4 @@
 
 namespace Mentalist\Logme\Exceptions;
 
-class FileNotWritableException extends \Exception {
-
-}
+class FileNotWritableException extends \Exception {}

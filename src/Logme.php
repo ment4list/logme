@@ -27,9 +27,12 @@ class Logme
      * @param string $basedir  The directory to write the log file to
      * @param string $filename The name of the file to write to
      *
+     * @throws FileDoesNotExistException
+     * @throws FileNotWritableException
+     *
      * @return void
      */
-    public function __construct($basedir, $filename = 'logme.log')
+    public function __construct($basedir, $filename = 'log-me.log')
     {
 
         $this->dir = $basedir;
@@ -41,7 +44,7 @@ class Logme
             throw new FileDoesNotExistException("{$basedir} is not a directory");
         }
         if( !is_writeable($basedir) ) {
-            throw new FileNotWritableException("{$basedir} is not writeable");
+            throw new FileNotWritableException("{$basedir} is not writable");
         }
 
         $this->file = "{$this->dir}{$this->filename}";
@@ -66,9 +69,11 @@ class Logme
 
     /**
      * Log a info line
-     * @param string $message The message to add to the log
-     * @param bool|array  $extra   An array of key/value pairs of any extra data to log.
      *
+     * @param string      $message The message to add to the log
+     * @param bool|array  $data    An array of key/value pairs of any extra data to log.
+     *
+     * @throws \Exception
      * @return void
      */
     public function info($message, $data = []) {
@@ -78,9 +83,11 @@ class Logme
 
     /**
      * Log a debug line
-     * @param string $message The message to add to the log
-     * @param bool|array  $extra   An array of key/value pairs of any extra data to log.
      *
+     * @param string      $message The message to add to the log
+     * @param bool|array  $data    An array of key/value pairs of any extra data to log.
+     *
+     * @throws \Exception
      * @return void
      */
     public function debug($message, $data = []) {
@@ -90,9 +97,11 @@ class Logme
 
     /**
      * Log a warning line
-     * @param string $message The message to add to the log
-     * @param bool|array  $extra   An array of key/value pairs of any extra data to log.
      *
+     * @param string      $message The message to add to the log
+     * @param bool|array  $data    An array of key/value pairs of any extra data to log.
+     *
+     * @throws \Exception
      * @return void
      */
     public function warn($message, $data = []) {
@@ -102,9 +111,11 @@ class Logme
 
     /**
      * Log a error line
-     * @param string $message The message to add to the log
-     * @param bool|array  $extra   An array of key/value pairs of any extra data to log.
      *
+     * @param string      $message The message to add to the log
+     * @param bool|array  $data    An array of key/value pairs of any extra data to log.
+     *
+     * @throws \Exception
      * @return void
      */
     public function error($message, $data = []) {
@@ -120,13 +131,10 @@ class Logme
      * @param string $message The message to add to the log
      * @param bool|array  $extra   An array of key/value pairs of any extra data to log.
      *                             If it's a boolean, 'True' or 'False' will be written
-     * @param string $level   The logging level. One of:
-     *  debug (the least serious)
-     *  info
-     *  warning
-     *  error
-     *  fatal (the most serious)
-     * @param bool $force     If true, will ignore debug setting. Default is false.
+     *
+     * @throws \Exception
+     *
+     * @return void
      */
     function write($message, $extra = array()) {
 
