@@ -79,18 +79,18 @@ Special thanks to [The League of Extraordinary Packages][link-inspiration] for t
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/Mentalist/Logme.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/mentalist/logme.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/Mentalist/Logme/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/Mentalist/Logme.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/Mentalist/Logme.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/Mentalist/Logme.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/Mentalist/Logme
-[link-travis]: https://travis-ci.org/Mentalist/Logme
-[link-scrutinizer]: https://scrutinizer-ci.com/g/Mentalist/Logme/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/Mentalist/Logme
-[link-downloads]: https://packagist.org/packages/Mentalist/Logme
+[link-packagist]: https://packagist.org/packages/mentalist/logme
+[link-travis]: https://travis-ci.org/mentalist/logme
+[link-scrutinizer]: https://scrutinizer-ci.com/g/mentalist/logme/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/mentalist/logme
+[link-downloads]: https://packagist.org/packages/mentalist/logme
 [link-author]: https://github.com/ment4list
 [link-inspiration]: https://thephpleague.com/
 [link-contributors]: ../../contributors
