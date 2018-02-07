@@ -1,0 +1,49 @@
+{
+    "name": "mentalist/logme",
+    "type": "library",
+    "description": "A very simple logger",
+    "keywords": [
+        "Mentalist",
+        "Logme"
+    ],
+    "homepage": "https://github.com/Mentalist/Logme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jurgens Banninga",
+            "email": "tooone777@gmail.com",
+            "homepage": "https://github.com/ment4list",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.6|~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mentalist\\Logme\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mentalist\\Logme\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
